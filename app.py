@@ -83,7 +83,7 @@ def main():
     if not st.session_state.name:
         st.markdown("---")
         with st.form("user_info", clear_on_submit=True):
-            st.subheader("👋 Welcome! Let's get to know you")
+            st.subheader("Welcome! Let's get FARMiliar! 😜")
             st.markdown("Please provide your information to get personalized farming advice:")
             
             name = st.text_input("Your First Name *", placeholder="Enter your first name")
