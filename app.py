@@ -109,7 +109,7 @@ def main():
         
         # Display chat history
         if st.session_state.chat_history:
-            st.subheader("💬 Chat History")
+            st.subheader("Let's get FARMiliar! 😜")
             
             for user_msg, bot_reply in st.session_state.chat_history:
                 display_chat_message(user_msg, bot_reply, st.session_state.name)
@@ -146,9 +146,8 @@ def main():
         # Quick suggestions (only for new users)
         if not st.session_state.chat_history:
             st.markdown("---")
-            st.subheader("💡 Popular Questions")
-            st.markdown("Click on any question below to get started:")
-            
+            st.subheader("Frequently Asked Questions")
+            st.markdown("Here are some common questions to get you started:")            
             col1, col2 = st.columns(2)
             
             suggestions = [
@@ -164,15 +163,15 @@ def main():
                     if st.button(button_text, key=f"suggestion_{i}"):
                         if handle_prompt(question):
                             st.rerun()
-
-# Footer with GitHub link
-st.markdown("---")
-st.markdown(
-    "<div style='text-align: center; padding: 20px; color: #666;'>"
-    "<a href='https://github.com/Sholz22/FarmAssist..git' target='_blank'>⭐ View Source Code on GitHub</a>"
-    "</div>",
-    unsafe_allow_html=True
-)
+    
+    # Footer with GitHub link - MOVED TO BOTTOM OF MAIN FUNCTION
+    st.markdown("---")
+    st.markdown(
+        "<div style='text-align: center; padding: 20px; color: #666;'>"
+        "<a href='https://github.com/Sholz22/FarmAssist..git' target='_blank'>View Source Code on GitHub (Sholz22)</a>"
+        "</div>",
+        unsafe_allow_html=True
+    )
 
 # CSS Styling
 def load_css():
