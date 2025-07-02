@@ -165,6 +165,15 @@ def main():
                         if handle_prompt(question):
                             st.rerun()
 
+# Footer with GitHub link
+st.markdown("---")
+st.markdown(
+    "<div style='text-align: center; padding: 20px; color: #666;'>"
+    "<a href='https://github.com/Sholz22/FarmAssist..git' target='_blank'>⭐ View Source Code on GitHub</a>"
+    "</div>",
+    unsafe_allow_html=True
+)
+
 # CSS Styling
 def load_css():
     """Load custom CSS styling."""
