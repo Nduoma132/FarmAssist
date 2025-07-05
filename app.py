@@ -185,7 +185,7 @@ def load_css():
         
         /* Main container styling */
         .main > div {
-            padding-top: 2rem;
+            padding-top: 1rem;
         }
         
         /* Chat message styling */
