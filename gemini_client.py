@@ -6,8 +6,9 @@ import streamlit as st
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel(MODEL_NAME)
 
+
+# Get response from Gemini AI model
 def get_gemini_response(prompt):
-    """Get response from Gemini AI model."""
     try:
         response = model.generate_content(
             prompt,
@@ -23,10 +24,13 @@ def get_gemini_response(prompt):
         st.error(f"Error getting AI response: {str(e)}")
         return "I'm sorry, I'm having trouble responding right now. Please try again in a moment."
 
+
+# Check if Gemini API key is configured
 def validate_api_key():
-    """Check if Gemini API key is configured."""
+    
     if not GEMINI_API_KEY:
-        st.error("Gemini API key not found. Please set your GEMINI_API_KEY in the .env file.")
+        st.error("⚠️ Gemini API key not found. Please set your GEMINI_API_KEY in the .env file.")
         st.stop()
         return False
+    
     return True
