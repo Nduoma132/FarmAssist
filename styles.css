@@ -1,0 +1,157 @@
+/* Hide Streamlit branding */
+#MainMenu {
+  visibility: visible;
+}
+footer {
+  visibility: visible;
+}
+header {
+  visibility: visible;
+}
+
+/* Main container styling */
+.main > div {
+  padding-top: 1rem;
+}
+
+/* Chat message styling */
+.user-message {
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 20px 20px 5px 20px;
+  margin: 10px 0 10px 20%;
+  box-shadow: 0 2px 10px rgba(76, 175, 80, 0.3);
+}
+
+.bot-message {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  color: #333;
+  padding: 15px 20px;
+  border-radius: 20px 20px 20px 5px;
+  margin: 10px 20% 10px 0;
+  border-left: 4px solid #4caf50;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-header {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.message-content {
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* Form styling */
+.stTextArea textarea {
+  border: 2px solid #4caf50;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.stTextArea textarea:focus {
+  border-color: #45a049;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.stTextInput input {
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.stTextInput input:focus {
+  border-color: #45a049;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+/* Button styling */
+.stButton button {
+  border-radius: 25px;
+  border: none;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.stButton button[kind="primary"] {
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: white;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.stButton button[kind="primary"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.stButton button[kind="secondary"] {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  color: #4caf50;
+  border: 2px solid #4caf50;
+  width: 100%;
+  text-align: left;
+  margin: 5px 0;
+}
+
+.stButton button[kind="secondary"]:hover {
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* Form submit button */
+.stForm button {
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-weight: 600;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.stForm button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+/* Title styling */
+h1 {
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  color: #4caf50;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .user-message,
+  .bot-message {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .stButton button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
