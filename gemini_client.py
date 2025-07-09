@@ -26,7 +26,7 @@ def get_gemini_response(prompt):
 def validate_api_key():
     """Check if Gemini API key is configured."""
     if not GEMINI_API_KEY:
-        st.error("⚠️ Gemini API key not found. Please set your GEMINI_API_KEY in the .env file.")
+        st.error("Gemini API key not found. Please set your GEMINI_API_KEY in the .env file.")
         st.stop()
         return False
     return True
